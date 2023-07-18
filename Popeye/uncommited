@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if git diff-index --quiet HEAD --; then
+    echo "No uncommitted changes found"
+    exit 0
+fi
+
+git diff-index --name-only HEAD -- | while read file; do
+    echo "Pushing changes in $file"
+    git add "$file"
+    git commit -m "Update $file"
+    git push
+done

@@ -1,0 +1,8 @@
+function calculateProduct(arr) {
+    return arr.reduce((sum, item) => sum * item, 1);
+}
+
+module.exports = {calculateProduct}
+const numbers = [2, 3, 4, 5];
+const product = calculateProduct(numbers);
+console.log(product);

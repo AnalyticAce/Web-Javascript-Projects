@@ -1,0 +1,8 @@
+function reverseWords(str) {
+    let reverseWordArr = str.split(" ").map(word => word.split("")/*.reverse()*/.join(""));
+    return reverseWordArr.reverse().join(" ");
+}
+
+const sentence = "Hello, World!";
+const reversedSentence = reverseWords(sentence);
+console.log(reversedSentence);

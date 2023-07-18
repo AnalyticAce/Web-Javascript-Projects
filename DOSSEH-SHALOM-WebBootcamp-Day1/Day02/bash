@@ -1,0 +1,9 @@
+#!/bin/bash
+
+hell="$1"
+
+if [ -z "$hell" ]; then
+  exit 1
+fi
+
+mkdir task$hell; cd task$hell && touch task$hell.js; cd ../
